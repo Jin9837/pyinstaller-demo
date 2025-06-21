@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/Jin9837/pyinstaller-demo.git'
+                git branch: 'main', url: 'https://github.com/Jin9837/pyinstaller-demo.git'
             }
         }
 
