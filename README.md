@@ -1,32 +1,15 @@
-<<<<<<< HEAD
-Jenkins + PyInstaller Demo (CI/CD with Docker and GitHub)
-1. Install Jenkins
-Problem Encountered
-When accessing Jenkins via http://localhost:8080/, it redirected to a login page but I didn’t have a username or password.
-To find the Jenkins home directory, I used:
-ps aux | grep jenkins
-Output:
-/opt/homebrew/opt/openjdk@17/bin/java -Dmail.smtp.starttls.enable=true -jar /opt/homebrew/opt/jenkins-lts/libexec/jenkins.war --httpListenAddress=127.0.0.1 --httpPort=8080
-This shows Jenkins was being run directly via the .war file located at:
-/opt/homebrew/opt/jenkins-lts/libexec/jenkins.war
-2. Install Docker
-To verify Docker installation:
-docker --version
-To test Docker:
-docker run hello-world
-If successful, it should print:
-Hello from Docker!
- 
-🎯 Goal
+# 🎯 Goal： Jenkins + PyInstaller Demo (CI/CD with Docker and GitHub)
 Build and package a Python script into a .exe (Windows) or binary (Mac/Linux) using PyInstaller, inside a Docker container, triggered from GitHub push via Jenkins.
  
 3. Create GitHub Repository
 1.	Go to GitHub and create a new repository (e.g. pyinstaller-demo).
 2.	Open Terminal and run:
-=======
-# Jenkins + PyInstaller Demo (CI/CD with Docker and GitHub)
+
 
 ## 1. Install Jenkins
+install jenkins: brew install jenkins-lts
+start jenkins: brew services start jenkins-lts 
+stop jenkins:  brew services stop jenkins-lts
 
 ### Problem Encountered
 
@@ -70,13 +53,6 @@ If successful, it should print:
 Hello from Docker!
 ```
 
----
-
-## 🎯 Goal
-
-Build and package a Python script into a `.exe` (Windows) or binary (Mac/Linux) using **PyInstaller**, inside a **Docker container**, triggered from **GitHub push via Jenkins**.
-
----
 
 ## 3. Create GitHub Repository
 
