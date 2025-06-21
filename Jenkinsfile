@@ -10,19 +10,13 @@ pipeline {
 
         stage('Build Docker Image') {
             steps {
-                script {
-                    dockerImage = docker.build("pyinstaller-demo")
-                }
+                sh '/usr/local/bin/docker build -t pyinstaller-demo .'
             }
         }
 
         stage('Run PyInstaller Binary') {
             steps {
-                script {
-                    docker.image("pyinstaller-demo").inside {
-                        sh './dist/app'
-                    }
-                }
+                sh '/usr/local/bin/docker run --rm pyinstaller-demo'
             }
         }
     }
