@@ -1,15 +1,17 @@
 # 🎯 Goal： Jenkins + PyInstaller Demo (CI/CD with Docker and GitHub)
 Build and package a Python script into a .exe (Windows) or binary (Mac/Linux) using PyInstaller, inside a Docker container, triggered from GitHub push via Jenkins.
- 
-3. Create GitHub Repository
-1.	Go to GitHub and create a new repository (e.g. pyinstaller-demo).
-2.	Open Terminal and run:
 
 
 ## 1. Install Jenkins
+```
 install jenkins: brew install jenkins-lts
-start jenkins: brew services start jenkins-lts 
+```
+```
+start jenkins: brew services start jenkins-lts
+```
+```
 stop jenkins:  brew services stop jenkins-lts
+```
 
 ### Problem Encountered
 
